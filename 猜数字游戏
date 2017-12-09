@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main ()
+{
+int a;
+int N=0;
+int x=0;
+int n=0;
+scanf("%d %d",&a,&N);
+
+do {
+scanf("%d",&x);
+if (x>a) {printf("Too big");}
+else  if (x<a) {printf("Too small");}
+n++;
+}while(x!=a&&x>0&&n<=N);
+
+if (x==a&&n<=N) {
+    switch (n) {case 1:printf("Bingo!");break;
+ case 2:printf("Lucky You!");break;
+ case 3:printf("Lucky You!");break;
+ default:printf("Good Guess!");break;
+ } 
+}
+else {printf("Game Over");}
+
+ 
+return 0;
+}
