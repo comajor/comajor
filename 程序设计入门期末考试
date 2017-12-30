@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main(){
+	int p,q,m,n;
+	scanf("%d/%d",&p,&q);
+	n=p;
+	m=q;
+	do{
+		if(n<=m){
+			m=m%n;
+		} else{
+			n=n%m;
+		}
+	} while(m&&n);
+	if(n>m){
+		m=n;
+	}
+	p/=m;
+	q/=m;
+	printf("%d/%d",p,q);
+	return 0;
+}
